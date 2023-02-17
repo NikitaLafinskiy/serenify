@@ -21,7 +21,9 @@ export default function StatsDisplay() {
 
   return (
     <div className='elements__stats'>
-      <div>{statsVisible ? <p>{currentStat}</p> : <img src={playSvg} />}</div>
+      <div>
+        {statsVisible ? <p>{currentStat}</p> : <img alt='play' src={playSvg} />}
+      </div>
     </div>
   );
 }
