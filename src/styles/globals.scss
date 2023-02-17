@@ -1,0 +1,10 @@
+@use "./abstracts" as *;
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: content-box;
+  background-color: $bg;
+  font-family: "Varela", sans-serif;
+  --webkit-tap-highlight-color: transparent;
+}

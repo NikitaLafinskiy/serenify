@@ -1,0 +1,31 @@
+@use "../../../styles/abstracts" as *;
+
+.elements {
+  &__stats {
+    div {
+      position: absolute;
+      width: 40%;
+      height: 40%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        color: $bg;
+        opacity: 0.7;
+        text-shadow: (0px 4px 4px rgba(0, 0, 0, 0.137));
+        font-size: 5vw;
+      }
+      img {
+        width: 40%;
+        filter: invert(89%) sepia(16%) saturate(157%) hue-rotate(165deg)
+          brightness(94%) contrast(116%) blur(0.5px)
+          drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.137));
+        opacity: 0.7;
+      }
+    }
+  }
+}
