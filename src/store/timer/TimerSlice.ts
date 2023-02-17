@@ -2,13 +2,13 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { TimerParams, TimerState } from "store/models";
 
 const initialState: TimerState = {
-  breaths: 3,
+  breaths: 30,
   currentBreaths: 1,
-  inhale: 2000,
+  inhale: 1700,
   currentInhale: 0,
-  exhale: 3000,
+  exhale: 1700,
   currentExhale: 0,
-  hold: 10000,
+  hold: 50000,
   currentHold: 0,
   inhaleMode: "idle",
   breathMode: "breath",

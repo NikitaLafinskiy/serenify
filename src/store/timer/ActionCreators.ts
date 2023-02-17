@@ -53,7 +53,7 @@ export class TimerActions {
       }, 1000);
       setTimeout(() => {
         dispatch(this.reset());
-      }, hold);
+      }, hold + 1000);
     };
   };
 
