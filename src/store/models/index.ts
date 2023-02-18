@@ -17,3 +17,8 @@ export interface TimerParams {
   exhale: number;
   hold: number;
 }
+
+export interface ModalState {
+  isActive: boolean;
+  innerComponent: "signup" | "options" | undefined;
+}

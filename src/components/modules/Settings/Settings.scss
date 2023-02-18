@@ -1,0 +1,103 @@
+.modules {
+  &__settings {
+    position: absolute;
+    bottom: 0px;
+
+    > div {
+      &:nth-child(1) {
+        transform: translateY(50%);
+        transition: transform 0.6s;
+
+        img {
+          width: 12vw;
+          height: 12vw;
+        }
+      }
+    }
+
+    .pop-up {
+      position: absolute;
+      flex-direction: row;
+      display: flex;
+      justify-content: space-between;
+      width: 21vw;
+      transition: transform 0.6s;
+      transform: translate(-25%, 0%);
+      z-index: 101;
+    }
+
+    &_options-mode {
+      @extend .modules__settings;
+      transition: 1s;
+      .pop-up {
+        transform: translate(-25%, -120%);
+        transition: transform 0.6s;
+      }
+      > div {
+        &:nth-child(1) {
+          transition: transform 0.6s;
+          transform: translateY(80%);
+        }
+      }
+    }
+
+    &_play-mode {
+      @extend .modules__settings;
+      > div {
+        &:nth-child(1) {
+          transition: transform 0.6s;
+          transform: translateY(120%);
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 900px) {
+    &__settings {
+      > div {
+        &:nth-child(1) {
+          img {
+            width: 15vw;
+            height: 15vw;
+          }
+        }
+      }
+
+      .pop-up {
+        width: 33vw;
+      }
+    }
+  }
+  @media only screen and (max-width: 630px) {
+    &__settings {
+      > div {
+        &:nth-child(1) {
+          img {
+            width: 19vw;
+            height: 19vw;
+          }
+        }
+      }
+
+      .pop-up {
+        width: 43vw;
+      }
+    }
+  }
+
+  @media only screen and (min-width: 1500px) {
+    &__settings {
+      > div {
+        &:nth-child(1) {
+          img {
+            width: 8vw;
+            height: 8vw;
+          }
+        }
+      }
+
+      .pop-up {
+        width: 15vw;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.elements {
+  &__modal {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    background-color: black;
+    opacity: 0;
+
+    &_visible {
+      @extend .elements__modal;
+      z-index: 100;
+      opacity: 0.4;
+    }
+
+    div {
+      z-index: 101;
+    }
+  }
+}

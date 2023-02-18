@@ -6,5 +6,6 @@ body {
   box-sizing: content-box;
   background-color: $bg;
   font-family: "Varela", sans-serif;
+  overflow: hidden;
   --webkit-tap-highlight-color: transparent;
 }

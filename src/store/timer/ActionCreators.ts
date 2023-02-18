@@ -1,6 +1,6 @@
 import { ThunkAction } from "@reduxjs/toolkit";
 import { AnyAction, CombinedState } from "redux";
-import { AppDispatch } from "store";
+import { AppDispatch, RootState } from "store";
 import { TimerState } from "store/models";
 import { timerSlice } from "./TimerSlice";
 
@@ -19,7 +19,7 @@ export class TimerActions {
 
   static breathe(): ThunkAction<
     Promise<void>,
-    CombinedState<{ timer: TimerState }>,
+    CombinedState<RootState>,
     undefined,
     AnyAction
   > {
@@ -44,7 +44,7 @@ export class TimerActions {
   static hold = () => {
     return async (
       dispatch: AppDispatch,
-      getState: () => CombinedState<{ timer: TimerState }>
+      getState: () => CombinedState<RootState>
     ) => {
       const { hold } = getState().timer;
       clearInterval(this.timer);
