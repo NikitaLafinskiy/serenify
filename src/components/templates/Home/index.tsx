@@ -1,6 +1,6 @@
 import { Modal } from "components/elements";
 import { Settings, Timer } from "components/modules";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useAppSelector } from "store/hooks/redux.hooks";
 import "./Home.scss";
 
