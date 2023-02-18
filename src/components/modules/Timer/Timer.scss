@@ -43,4 +43,17 @@
       }
     }
   }
+  @media only screen and (max-width: 850px) {
+    &__timer {
+      width: 55vw;
+      height: 55vw;
+    }
+  }
+
+  @media only screen and (max-width: 630px) {
+    &__timer {
+      width: 65vw;
+      height: 65vw;
+    }
+  }
 }

@@ -50,7 +50,7 @@ export default function Timer() {
     <div
       className={`modules__${currentClass}`}
       onClick={() => {
-        dispatch(TimerActions.start());
+        inhaleMode === "idle" && dispatch(TimerActions.start());
       }}
     >
       <TimerImage />
