@@ -1,0 +1,11 @@
+@use "../../../styles/abstracts" as *;
+
+.elements {
+  &__header {
+    display: inline;
+    margin: 0px;
+    padding: 0px;
+    color: $formMain;
+    font-weight: 400;
+  }
+}

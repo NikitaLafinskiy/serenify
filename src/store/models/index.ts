@@ -20,5 +20,10 @@ export interface TimerParams {
 
 export interface ModalState {
   isActive: boolean;
-  innerComponent: "signup" | "options" | undefined;
+  innerComponent: "auth" | "options" | undefined;
+  isSettingsMode: boolean;
+}
+
+export interface AuthState {
+  isSignUp: boolean;
 }

@@ -1,0 +1,90 @@
+@use "../../../styles/abstracts" as *;
+
+.elements {
+  &__input {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: $formMain;
+    font-size: 1vw;
+
+    p {
+      text-transform: capitalize;
+      display: inline;
+      padding: 0px;
+      margin: 0px;
+      color: $formMain;
+      font-weight: 200;
+    }
+    input {
+      font-size: 1vw;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid $formMain;
+      background-color: transparent;
+      color: $formSecondary;
+
+      &::placeholder {
+        color: $formMain;
+        opacity: 0.3;
+        position: absolute;
+        left: 0px;
+        margin: 0px 0px 4px 0px;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1200px) {
+    &__input {
+      p {
+        font-size: 1.5vw;
+      }
+      input {
+        font-size: 1.5vw;
+      }
+      font-size: 1.2vw;
+    }
+  }
+
+  @media only screen and (max-width: 900px) {
+    &__input {
+      p {
+        font-size: 2.1vw;
+      }
+      input {
+        font-size: 2.1vw;
+      }
+      font-size: 1.5vw;
+    }
+  }
+
+  @media only screen and (max-width: 750px) {
+    &__input {
+      p {
+        font-size: 2.7vw;
+      }
+      input {
+        font-size: 2.7vw;
+      }
+      font-size: 1.8vw;
+    }
+  }
+
+  @media only screen and (max-width: 630px) {
+    &__input {
+      p {
+        font-size: 3.5vw;
+      }
+      input {
+        font-size: 3.5vw;
+      }
+      font-size: 2.2vw;
+    }
+  }
+
+  @media only screen and (max-width: 630px) {
+    &__input {
+      font-size: 2.6vw;
+    }
+  }
+}

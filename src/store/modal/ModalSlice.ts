@@ -4,6 +4,7 @@ import { ModalState } from "store/models";
 const initialState: ModalState = {
   isActive: false,
   innerComponent: undefined,
+  isSettingsMode: true,
 };
 
 export const modalSlice = createSlice({
@@ -13,8 +14,14 @@ export const modalSlice = createSlice({
     setIsActive(state, action: PayloadAction<boolean>) {
       state.isActive = action.payload;
     },
-    setInnerComponent(state, action: PayloadAction<"signup" | "options">) {
+    setInnerComponent(
+      state,
+      action: PayloadAction<"auth" | "options" | undefined>
+    ) {
       state.innerComponent = action.payload;
+    },
+    setIsSettingsMode(state, action: PayloadAction<boolean>) {
+      state.isSettingsMode = action.payload;
     },
   },
 });

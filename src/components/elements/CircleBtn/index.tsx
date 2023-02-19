@@ -1,4 +1,4 @@
-import { CircleBtnProps } from "../models";
+import { CircleBtnProps } from "components/models";
 import "./CircleBtn.scss";
 
 export default function CircleBtn({ image, onClick }: CircleBtnProps) {

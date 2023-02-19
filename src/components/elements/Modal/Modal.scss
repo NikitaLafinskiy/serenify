@@ -2,12 +2,20 @@
   &__modal {
     width: 100vw;
     height: 100vh;
-    position: fixed;
+    position: absolute;
     top: 0px;
     left: 0px;
     z-index: -1;
     background-color: black;
     opacity: 0;
+
+    &__child {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 101;
+    }
 
     &_visible {
       @extend .elements__modal;
