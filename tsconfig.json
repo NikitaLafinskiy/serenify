@@ -1,3 +1,4 @@
+/// <reference types="web-audio-api" />
 {
   "compilerOptions": {
     "target": "es6",
