@@ -1,5 +1,5 @@
 import { Modal } from "components/elements";
-import { Auth, Home } from "components/templates";
+import { Auth, Home, Options } from "components/templates";
 import { useAppSelector } from "store/hooks/redux.hooks";
 import "./home.scss";
 
@@ -11,7 +11,13 @@ export default function HomePage() {
       <div className='pages__home'>
         <Home />
       </div>
-      <Modal>{innerComponent === "auth" ? <Auth /> : undefined}</Modal>
+      <Modal>
+        {innerComponent === "auth" ? (
+          <Auth />
+        ) : innerComponent === "options" ? (
+          <Options />
+        ) : undefined}
+      </Modal>
     </>
   );
 }

@@ -6,6 +6,7 @@ import Button from "components/elements/Button";
 import Input from "components/elements/Input";
 import Form from "components/elements/Form";
 import Header from "components/elements/Header";
+import FormikSlider from "components/elements/Slider";
 
 export {
   TimerImage,
@@ -16,4 +17,5 @@ export {
   Input,
   Form,
   Header,
+  FormikSlider,
 };

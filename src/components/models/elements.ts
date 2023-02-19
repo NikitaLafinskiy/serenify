@@ -1,3 +1,4 @@
+import { FieldHookConfig } from "formik";
 import React from "react";
 
 export interface CircleBtnProps {
@@ -32,3 +33,11 @@ export interface HeaderProps extends React.ComponentProps<"h1"> {
   styles?: React.CSSProperties;
   children: React.ReactNode;
 }
+
+export type SliderProps = {
+  label: string;
+  min: number;
+  max: number;
+  step: number;
+  name: string;
+} & FieldHookConfig<number>;

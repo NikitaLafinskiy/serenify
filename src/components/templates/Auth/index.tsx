@@ -14,6 +14,7 @@ export default function Auth() {
     values = initialValues,
     { setSubmitting }: FormikHelpers<AuthValues>
   ) => {
+    console.log(values);
     setSubmitting(false);
   };
 

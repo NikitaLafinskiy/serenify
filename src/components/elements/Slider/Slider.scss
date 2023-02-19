@@ -1,0 +1,9 @@
+@use "../../../styles/abstracts" as *;
+
+.elements {
+  &__slider {
+    label {
+      color: $formMain;
+    }
+  }
+}
