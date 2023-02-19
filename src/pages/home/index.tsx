@@ -1,5 +1,4 @@
 import { Modal } from "components/elements";
-import { Timer } from "components/modules";
 import { Auth, Home } from "components/templates";
 import { useAppSelector } from "store/hooks/redux.hooks";
 import "./home.scss";
