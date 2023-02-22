@@ -1,5 +1,7 @@
 import { ThunkAction } from "@reduxjs/toolkit";
 import { AnyAction, CombinedState } from "redux";
+import { Options } from "store/models";
+import { OptionsService } from "services/http/options/OptionsService";
 import { AppDispatch, RootState } from "store";
 import { TimerState } from "store/models";
 import { timerSlice } from "./TimerSlice";
@@ -62,6 +64,13 @@ export class TimerActions {
       dispatch(timerSlice.actions.resetBreathMode());
       dispatch(this.start());
       clearInterval(this.holdTimer);
+    };
+  }
+
+  static updateOptions(options: Options) {
+    return async (dispatch: AppDispatch) => {
+      const { data } = await OptionsService.updateOptions(options);
+      dispatch(timerSlice.actions.setParams(data.options));
     };
   }
 }

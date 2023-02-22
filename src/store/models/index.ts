@@ -11,13 +11,6 @@ export interface TimerState {
   breathMode: "breath" | "hold";
 }
 
-export interface TimerParams {
-  breaths: number;
-  inhale: number;
-  exhale: number;
-  hold: number;
-}
-
 export interface ModalState {
   isActive: boolean;
   innerComponent: "auth" | "options" | undefined;
@@ -26,4 +19,19 @@ export interface ModalState {
 
 export interface AuthState {
   isSignUp: boolean;
+  currentUser: User | undefined;
+}
+
+export interface User {
+  id: string;
+  username: string;
+  createdAt: Date;
+  updatedAt: Date;
+}
+
+export interface Options {
+  breaths: number;
+  inhale: number;
+  exhale: number;
+  hold: number;
 }

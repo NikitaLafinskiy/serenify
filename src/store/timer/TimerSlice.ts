@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { TimerParams, TimerState } from "store/models";
+import { Options, TimerState } from "store/models";
 
 const initialState: TimerState = {
   breaths: 30,
@@ -52,11 +52,11 @@ export const timerSlice = createSlice({
       state.currentInhale = 0;
       state.currentHold = 0;
     },
-    setParams(state, action: PayloadAction<TimerParams>) {
+    setParams(state, action: PayloadAction<Options>) {
       state.breaths = action.payload.breaths;
-      state.inhale = action.payload.inhale;
-      state.exhale = action.payload.exhale;
-      state.hold = action.payload.hold;
+      state.inhale = action.payload.inhale * 1000;
+      state.exhale = action.payload.exhale * 1000;
+      state.hold = action.payload.hold * 1000;
     },
   },
 });
