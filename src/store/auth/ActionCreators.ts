@@ -10,6 +10,7 @@ export class AuthActions {
       const { data } = await AuthService.signup(authCredentials);
       dispatch(authSlice.actions.setUser(data.user));
       localStorage.setItem("token", data.accessToken);
+      localStorage.setItem("refreshToken", data.refreshTokenId);
     };
   }
 
@@ -18,6 +19,7 @@ export class AuthActions {
       const { data } = await AuthService.login(authCredentials);
       dispatch(authSlice.actions.setUser(data.user));
       localStorage.setItem("token", data.accessToken);
+      localStorage.setItem("refreshToken", data.refreshTokenId);
     };
   }
 

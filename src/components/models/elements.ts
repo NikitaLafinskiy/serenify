@@ -41,3 +41,15 @@ export type SliderProps = {
   step: number;
   name: string;
 } & FieldHookConfig<number>;
+
+export interface LinkProps {
+  to: string;
+  styles?: React.CSSProperties;
+  children: React.ReactNode;
+}
+
+export interface TextProps {
+  handleClick: () => void;
+  styles?: React.CSSProperties;
+  children: React.ReactNode;
+}

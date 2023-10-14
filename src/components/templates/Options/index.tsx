@@ -3,6 +3,7 @@ import { OptionsForm } from "components/modules";
 import { Formik, FormikHelpers, FormikProps } from "formik";
 import { optionsValidator } from "services/validators";
 import { useAppDispatch, useAppSelector } from "store/hooks/redux.hooks";
+import { ModalActions } from "store/modal/ActionCreators";
 import { TimerActions } from "store/timer/ActionCreators";
 
 export default function Options() {
@@ -31,6 +32,7 @@ export default function Options() {
       })
     );
     setSubmitting(false);
+    dispatch(ModalActions.disableModal());
   };
 
   return (
@@ -44,12 +46,4 @@ export default function Options() {
       }}
     </Formik>
   );
-}
-function useAppselector(arg0: (state: any) => any): {
-  breaths: any;
-  inhale: any;
-  exhale: any;
-  hold: any;
-} {
-  throw new Error("Function not implemented.");
 }

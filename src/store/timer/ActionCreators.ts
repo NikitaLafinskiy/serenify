@@ -70,7 +70,7 @@ export class TimerActions {
   static updateOptions(options: Options) {
     return async (dispatch: AppDispatch) => {
       const { data } = await OptionsService.updateOptions(options);
-      dispatch(timerSlice.actions.setParams(data.options));
+      dispatch(timerSlice.actions.setParams(data.optionsUpdate));
     };
   }
 }

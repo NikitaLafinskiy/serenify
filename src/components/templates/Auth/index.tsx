@@ -4,6 +4,7 @@ import { AuthValues } from "components/models";
 import { AuthForm } from "components/modules";
 import { useAppDispatch, useAppSelector } from "store/hooks/redux.hooks";
 import { AuthActions } from "store/auth/ActionCreators";
+import { ModalActions } from "store/modal/ActionCreators";
 import "./Auth.scss";
 
 export default function Auth() {
@@ -34,6 +35,7 @@ export default function Auth() {
         );
 
     setSubmitting(false);
+    dispatch(ModalActions.disableModal());
   };
 
   return (

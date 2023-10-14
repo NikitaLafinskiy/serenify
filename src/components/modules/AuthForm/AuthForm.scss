@@ -35,6 +35,12 @@
         height: 3vw;
       }
     }
+
+    > p {
+      font-size: 1vw;
+      position: relative;
+      top: -5px;
+    }
   }
 
   @media only screen and (min-width: 1500px) {
@@ -48,6 +54,11 @@
     &__auth-form {
       width: 38vw;
       height: 32vw;
+
+      > p {
+        font-size: 1.2vw;
+      }
+
       form {
         button {
           height: 3.5vw;
@@ -60,6 +71,10 @@
     &__auth-form {
       width: 45vw;
       height: 39vw;
+      > p {
+        font-size: 1.5vw;
+      }
+
       form {
         button {
           height: 4vw;
@@ -72,6 +87,9 @@
     &__auth-form {
       width: 57vw;
       height: 49vw;
+      > p {
+        font-size: 1.7vw;
+      }
       form {
         height: 70%;
         button {
@@ -85,6 +103,9 @@
     &__auth-form {
       width: 70vw;
       height: 57vw;
+      > p {
+        font-size: 2vw;
+      }
       form {
         height: 79%;
         button {
@@ -98,6 +119,9 @@
     &__auth-form {
       width: 80vw;
       height: 65vw;
+      > p {
+        font-size: 2.3vw;
+      }
       form {
         height: 85%;
         button {

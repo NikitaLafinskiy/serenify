@@ -1,0 +1,11 @@
+@use "../../../styles/abstracts" as *;
+
+.elements {
+  &__text {
+    color: $formMain;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    height: fit-content;
+  }
+}

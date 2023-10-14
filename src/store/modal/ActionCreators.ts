@@ -12,6 +12,7 @@ export class ModalActions {
 
   static disableModal() {
     return (dispatch: AppDispatch) => {
+      console.log("Disabling modal");
       dispatch(modalSlice.actions.setIsActive(false));
       dispatch(modalSlice.actions.setInnerComponent(undefined));
     };

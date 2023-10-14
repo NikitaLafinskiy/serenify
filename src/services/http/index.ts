@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API_URL = "http://localhost:3000";
+export const API_URL = "https://api.sereni-fy.com";
 
 export const $api = axios.create({
   baseURL: API_URL,
@@ -37,6 +37,9 @@ const refresh = async (err: any) => {
 
   const res = await axios.get(`${API_URL}/auth/refresh`, {
     withCredentials: true,
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("refreshToken")}`,
+    },
   });
   localStorage.setItem("token", res.data.accessToken);
   const initialRes = await $api.get(`${initialUrl}`);

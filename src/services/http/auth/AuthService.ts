@@ -22,6 +22,6 @@ export class AuthService {
   }
 
   static async getUser(): Promise<AxiosResponse<GetUserRes>> {
-    return $api.get("/auth/getUser");
+    return $api.get("/user/get");
   }
 }

@@ -1,6 +1,7 @@
 export interface AuthRes {
   user: User;
   accessToken: string;
+  refreshTokenId: string;
 }
 
 export interface GetUserRes {
@@ -9,7 +10,7 @@ export interface GetUserRes {
 }
 
 export interface UpdateOptionsRes {
-  options: Options;
+  optionsUpdate: Options;
 }
 
 export interface AuthCredentials {
