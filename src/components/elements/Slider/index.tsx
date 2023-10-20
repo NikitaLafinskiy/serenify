@@ -1,14 +1,8 @@
 import React from "react";
-import { makeStyles, Slider } from "@material-ui/core";
+import { Slider } from "@mui/material";
 import { useField } from "formik";
 import { SliderProps } from "components/models";
 import "./Slider.scss";
-
-const useStyles = makeStyles({
-  slider: {
-    color: "#2667ff",
-  },
-});
 
 const FormikSlider: React.FC<SliderProps> = ({
   label,
@@ -21,14 +15,9 @@ const FormikSlider: React.FC<SliderProps> = ({
   /* eslint-disable @typescript-eslint/no-unused-vars */
   const [field, meta, helpers] = useField(name);
 
-  const handleChange = (
-    event: React.ChangeEvent<{}>,
-    value: number | number[]
-  ) => {
+  const handleChange = (event: Event, value: number | number[]) => {
     helpers.setValue(value as number);
   };
-
-  const classes = useStyles();
 
   return (
     <div className='elements__slider'>
@@ -40,7 +29,9 @@ const FormikSlider: React.FC<SliderProps> = ({
         step={step}
         onChange={handleChange}
         valueLabelDisplay='auto'
-        classes={{ root: classes.slider }}
+        sx={{
+          color: "#2667ff",
+        }}
       />
     </div>
   );
