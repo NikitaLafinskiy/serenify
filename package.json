@@ -25,6 +25,7 @@
     "react-scripts": "^5.0.1",
     "redux": "^4.2.1",
     "sass": "^1.58.1",
+    "typescript": "^4.9.5",
     "web-vitals": "^2.1.4",
     "workbox-background-sync": "^6.5.4",
     "workbox-broadcast-update": "^6.5.4",
@@ -65,9 +66,16 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/plugin-transform-class-properties": "^7.22.5",
+    "@babel/plugin-transform-nullish-coalescing-operator": "^7.22.11",
+    "@babel/plugin-transform-numeric-separator": "^7.22.11",
+    "@babel/plugin-transform-private-methods": "^7.22.5",
+    "@babel/plugin-transform-private-property-in-object": "^7.22.11",
+    "@jridgewell/sourcemap-codec": "^1.4.15",
+    "@rollup/plugin-terser": "^0.4.4",
     "@types/react": "^18.2.31",
     "@types/react-dom": "^18.2.14",
-    "@types/react-router-dom": "^5.3.3",
-    "typescript": "^5.2.2"
+    "@types/react-router-dom": "^5.3.3"
   }
 }
