@@ -52,6 +52,14 @@ export const timerSlice = createSlice({
       state.currentInhale = 0;
       state.currentHold = 0;
     },
+    stopBreathMode(state) {
+      state.breathMode = "breath";
+      state.inhaleMode = "idle";
+      state.currentBreaths = 1;
+      state.currentExhale = 0;
+      state.currentInhale = 0;
+      state.currentHold = 0;
+    },
     setParams(state, action: PayloadAction<Options>) {
       state.breaths = action.payload.breaths;
       state.inhale = action.payload.inhale * 1000;

@@ -18,6 +18,9 @@
         opacity: 0.7;
         text-shadow: (0px 4px 4px rgba(0, 0, 0, 0.137));
         font-size: 5vw;
+        @media (max-width: 768px) {
+          font-size: 10vw;
+        }
       }
       img {
         width: 40%;

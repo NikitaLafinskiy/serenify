@@ -13,4 +13,11 @@ export class OptionsService {
       hold: options.hold,
     });
   }
+
+  static async setLocalOptions(options: Options) {
+    localStorage.setItem("breaths", options.breaths.toString());
+    localStorage.setItem("inhale", options.inhale.toString());
+    localStorage.setItem("hold", options.hold.toString());
+    localStorage.setItem("exhale", options.exhale.toString());
+  }
 }

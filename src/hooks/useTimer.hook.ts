@@ -28,6 +28,9 @@ export const useTimer = ({
       playExhale();
       setCurrentClass("timer");
       setTransitionStyle(`${exhale / 1000}s`);
+    } else if (inhaleMode === "idle") {
+      setCurrentClass("timer");
+      setTransitionStyle("0.5s");
     }
   }, [inhaleMode]);
 

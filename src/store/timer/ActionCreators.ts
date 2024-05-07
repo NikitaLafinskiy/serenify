@@ -19,6 +19,14 @@ export class TimerActions {
     };
   }
 
+  static stop() {
+    return async (dispatch: AppDispatch) => {
+      clearInterval(this.timer);
+      clearInterval(this.holdTimer);
+      dispatch(timerSlice.actions.stopBreathMode());
+    };
+  }
+
   static breathe(): ThunkAction<
     Promise<void>,
     CombinedState<RootState>,
@@ -69,8 +77,9 @@ export class TimerActions {
 
   static updateOptions(options: Options) {
     return async (dispatch: AppDispatch) => {
-      const { data } = await OptionsService.updateOptions(options);
-      dispatch(timerSlice.actions.setParams(data.optionsUpdate));
+      // const { data } = await OptionsService.updateOptions(options);
+      OptionsService.setLocalOptions(options);
+      dispatch(timerSlice.actions.setParams(options));
     };
   }
 }

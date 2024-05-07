@@ -12,6 +12,8 @@ export default function StatsDisplay() {
   useEffect(() => {
     if (inhaleMode !== "idle") {
       setStatsVisible(true);
+    } else if (inhaleMode === "idle") {
+      setStatsVisible(false);
     }
     setCurrentStat(currentBreaths);
     if (breathMode === "hold") {

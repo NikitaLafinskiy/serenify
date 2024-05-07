@@ -25,11 +25,13 @@ export default function Settings() {
         <CircleBtn
           image={settingsSvg}
           onClick={() => {
+            // dispatch(modalSlice.actions.setIsSettingsMode(false));
+            // dispatch(modalSlice.actions.setIsActive(true));
+            dispatch(ModalActions.enableModal("options"));
             dispatch(modalSlice.actions.setIsSettingsMode(false));
-            dispatch(modalSlice.actions.setIsActive(true));
           }}
         />
-        <div className='pop-up'>
+        {/* <div className='pop-up'>
           <CircleBtn
             image={optionsSvg}
             onClick={() => {
@@ -42,7 +44,7 @@ export default function Settings() {
               dispatch(ModalActions.enableModal("auth"));
             }}
           />
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -4,6 +4,7 @@ import { Formik, FormikHelpers, FormikProps } from "formik";
 import { optionsValidator } from "services/validators";
 import { useAppDispatch, useAppSelector } from "store/hooks/redux.hooks";
 import { ModalActions } from "store/modal/ActionCreators";
+import { modalSlice } from "store/modal/ModalSlice";
 import { TimerActions } from "store/timer/ActionCreators";
 
 export default function Options() {
@@ -33,6 +34,7 @@ export default function Options() {
     );
     setSubmitting(false);
     dispatch(ModalActions.disableModal());
+    dispatch(modalSlice.actions.setIsSettingsMode(true));
   };
 
   return (
