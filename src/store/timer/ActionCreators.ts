@@ -10,6 +10,7 @@ export class TimerActions {
   static timeInterval: number = 50;
   static timer: NodeJS.Timer;
   static holdTimer: NodeJS.Timer;
+  static newIterationTimeout: NodeJS.Timeout;
 
   static start() {
     return async (dispatch: AppDispatch) => {
@@ -21,8 +22,9 @@ export class TimerActions {
 
   static stop() {
     return async (dispatch: AppDispatch) => {
-      clearInterval(this.timer);
       clearInterval(this.holdTimer);
+      clearInterval(this.timer);
+      clearTimeout(this.newIterationTimeout);
       dispatch(timerSlice.actions.stopBreathMode());
     };
   }
@@ -61,7 +63,7 @@ export class TimerActions {
       this.holdTimer = setInterval(() => {
         dispatch(timerSlice.actions.incrementHold(1000));
       }, 1000);
-      setTimeout(() => {
+      this.newIterationTimeout = setTimeout(() => {
         dispatch(this.reset());
       }, hold + 1000);
     };
